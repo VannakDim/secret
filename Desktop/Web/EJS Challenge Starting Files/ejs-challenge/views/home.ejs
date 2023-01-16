@@ -1,0 +1,12 @@
+<%- include('partial/header'); -%>
+<h1>Home</h1>
+<p>មកទីនេះដើម្បីចង់ដឹងពីខ្ញុំមែនទេ មិនខុសបំណងទេ ព្រោះខ្ញុំបានបង្កើតគេហទំព័រនេះដើម្បីរក្សាទុក ដំណើរជីវិតរបស់ខ្ញុំទាំងអស់តាមដែលអាចធ្វើទៅបាន</p>
+<a href="/compose">Create post</a>
+    <% postItem.forEach(function(post){ %>
+        <h3><%= post.pTitle %></h3>
+        <span><%= post.pBody.substring(0,100) + "..." %></span>
+        <a href="/post/<%= post.pTitle %>">read more</a>
+    <% }) %>
+
+
+<%- include('partial/footer'); -%>
